@@ -1,0 +1,8 @@
+ #list {
+	min-height: 360px;
+	max-height: 360px;
+	width: 300px;
+	margin: auto;
+	overflow: scroll;
+}
+
