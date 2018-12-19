@@ -33,9 +33,15 @@
 	  var removeButton = document.createElement('button');
 
 	  removeButton.textContent = "Remove";
-	  //removeButton.createElement('button');
 	  removeButton.type = "button";
 	  removeButton.className = "remove";
+	  removeButton.addEventListener("click", function() {
+	    var anchor = this.previousElementSibling;
+	    var url = anchor.getAttribute("href");
+	    removeUrlAndSave(url);
+	    this.parentNode.remove();
+	  });
+
 
 
 	  newLink.textContent = url;
@@ -48,8 +54,17 @@
 	  newEntry.className = "listItem";
 
 	  document.getElementById("list").appendChild(newEntry);
-
 	}
+
+
+	function removeUrlAndSave(url) {
+	  var index = urlList.indexOf(url);
+	  if (index != -1) {
+	    urlList.splice(index, 1);
+	    saveUrlList();
+	  }
+	}
+
 
 	function addUrlToListAndSave(url) {
 	  urlList.push(url);
@@ -70,7 +85,7 @@
 
 	// remove a single bookmark item
 	document.addEventListener('DOMContentLoaded', function() {
-	  restore();
+	  getUrlListAndRestoreInDom();
 	  var allButtons = document.getElementsByClassName('remove');
 
 	  function listenI(i) {
@@ -84,22 +99,6 @@
 	function removeMe(i) {
 	  var fullList = documents.getElementsByClassName('listItem');
 	  listItem[i].parentNode.removeChild(listItem[i]);
-	}
-
-	function restore() {
-	  // get the tab link and title
-	  chrome.storage.local.get({
-	    urlList: []
-	  }, function(data) {
-	    urlList = data.urlList;
-	    //titleList = data.titleList;
-
-	    // add the titles and url's to the DOM
-	    for (var i = 0, n = urlList.length; i < n; i++) {
-	      addUrlToDom(urlList[i]);
-	    }
-	  });
-
 	}
 
 	//remove all button
