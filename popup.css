@@ -1,8 +1,314 @@
- #list {
-	min-height: 360px;
-	max-height: 360px;
-	width: 300px;
-	margin: auto;
-	overflow: scroll;
+ body {
+ 	margin:0px;
+ 	margin-top:0px;
+ 	/*padding:4px;*/
+ 	
+
+
+ 	/*border-radius: 5px;*/
+ 	height:400px;
+ 	max-height:400px;
+ 	width:280px;
+ 	max-width:280px;
+ 	/*overflow:scroll;*/
+ 	display: inline-block;
+ 	font-family: 'Roboto', sans-serif;
+
+ }
+
+/*a:active { 
+	color: red; 
+}*/
+/*
+.scrollbar {
+	margin-left: 30px;
+	float: right;
+	height: 280px;
+	width: 5px;
+	background: #000;
+	overflow-y: scroll;
+	margin-bottom: 25px;
+	z-index: 101;
+}*/
+
+/* width */
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	/*background-color: transparent;*/
+	display: none;
 }
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #d2d4d5;
+	border-radius: 10px
+	/*opacity: 0.5;*/
+	/*border: 2px solid #d2d4d5	;*/
+}
+
+::-webkit-scrollbar
+{
+	width: 5px;
+	/*background: red;*/
+
+}
+
+.force-overflow
+{
+	min-height: 280px;
+}
+
+a:visited { 
+	color: #6A6D70; 
+}
+
+
+ a {
+ 	text-decoration: none;
+
+ 	/*display: block;*/
+ 	position:relative;
+/* 	left:10px;
+ 	top:10px;*/
+ 	color: #6A6D70;
+ 	/*position: relative;
+    margin: 0 10px;
+ 	padding: 0.5em 0.625em;*/
+ }
+
+ a:hover {
+ 	color:#000;
+ }
+
+ #list {
+	min-height: 280px;
+	max-height: 280px;
+	width: 280px;
+	/*overflow:scroll;*/
+	/*margin: auto;*/
+	/*position:;*/
+}
+
+ul, li {
+  list-style-type: none;
+  /*width: 282px;*/
+  /*overflow: hidden;*/
+
+  margin:0px;
+  padding:0px;
+ 
+}
+
+.fileList {
+/*	border-style:solid;
+	border-width:1px;*/
+	width: 278px;
+	height:34px;
+	background:#F7F9FA;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #C2DFFE;
+}
+
+
+.listItem {
+	position: relative;
+	margin:0px 20px;
+	/*margin: 10px 0px 10px 16px;*/
+	padding: 10px 0px 0px 0px;
+	width:245px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+ 	/*padding: 0.5em 0.625em;*/
+
+/*	width:40px;
+	height:20px;*/
+	/*this is just goiing to be as wide as the text really so I don't think I'll end up defining a height or width.*/
+}
+
+/*.listItem {
+	width: 278px;
+	height: 34px;
+	overflow:hidden;
+	border: solid;
+	border-width: 1px;
+
+
+
+}*/
+
+
+
+	/*width: 2240px;*/
+
+	/*width:280px;*/
+	/*height:34px;*/
+
+
+
+
+/*li {
+	
+	text-overflow: ellipsis;
+	border: solid;
+	border-top:0px;
+	border-bottom-width: 1px;
+	text-align: center;
+	white-space: nowrap;*/
+/*	
+	
+	overflow:hidden;
+	background: #F7F9FA;
+	position:relative;
+	left:-40px;
+
+
+	border-bottom-color: #C2DFFE;*/
+/*}*/
+
+/*.listItem:hover {
+	background: #C2DFFE;
+	visibility: visible;
+}*/
+
+/*.remove {
+	visibility: hidden;
+	transition: all 0s;
+}*/
+
+.remove {
+	visibility: hidden;
+	/*transition: all 0.33s;*/
+
+	background:#F7F9FA;
+	width:20px;
+	float: right;
+	position:relative;
+	right:7px;
+	top:7.5px;
+	z-index: 100;
+}
+
+ .path-remove {
+ 	visibility: hidden;
+	/*transition: all 0.33s;*/
+}
+
+.remove:hover .path-remove {
+	fill: #0073e5;
+}
+
+li:hover .remove {
+	visibility: visible;
+	/*transition: all 0s;*/
+}
+
+li:hover .path-remove {
+	visibility: visible;
+	/*transition: all 0s;*/
+}
+
+first-path {
+	transition: all 0.33s;
+}
+
+h2 {
+	position: relative;
+	left: 76px;
+	top:-16.5px;
+	font-size: 18px; font-weight: 450;
+	color:#85878c;
+	/*transition:all 0.33s;*/
+}
+
+#top:hover {
+	cursor:pointer;
+}
+
+#top h2 {
+	transition: all 0.33s;
+}
+
+#top:hover h2 {
+	color:#000
+	/*transition: all 0.33s;*/
+}
+
+#top #first-path {
+	transition: all 0.33s;
+}
+
+#top:hover #first-path {
+	fill:#0073e5;
+	transition: all 0.33s;
+}
+
+#list {
+	height:280px;
+	max-height:280px;
+	width:280px;
+	max-width: 280px;
+	border-style:none;
+	border-color:#c4cad3;
+	border-width:1px;	
+	overflow-y:overlay;
+	overflow-x:hidden;
+}
+
+#addButton  {
+	height:36px;
+	width:36px;
+	position: relative;
+	left: 30px;
+	top: 30px;
+	fill:#3F9FFF;
+	/*transition: all 0.33s;*/
+}
+
+.drop-details {
+	color:#a8afb7;
+	/*display: none;*/
+	/*visibility: visible;*/
+	/*position: relative;*/
+	/*left:10px;*/
+	/*top:5px;*/
+}
+
+/*#image-container {
+	width: 280px;
+	height: 80px;
+	border-style: solid;
+	border-top-style: none;
+ 	border-width: 1px;
+ 	margin-top: 2px;
+}
+/**/
+
+ #link-container {
+ 	width: 280px;
+ 	height:40px;
+ 	border-style: solid;
+ 	border-top-style: none;
+ 	border-width: 1px;
+ 	margin-top: 2px;
+ }			
+
+ #desc-container {
+ 	width: 280px;
+ 	height:150px;
+ 	border-style: solid;
+ 	border-top-style: none;
+ 	border-width: 1px;
+ 	margin-top: 2px;
+ }
+
+ #date-container {
+ 	width: 280px;
+ 	height: 40px;
+ 	border-style: solid;
+ 	border-top-style: none;
+ 	border-width: 1px;
+ 	margin-top: 2px;
+ }
 

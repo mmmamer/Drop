@@ -4,29 +4,62 @@
   <head>
     <meta charset="utf-8">
     <title>Document</title>
+    <script src="jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="jquery.validate.js"></script>
     <script type="text/javascript" src="popup.js"></script>
+    <!-- <script type="text/javascript" src="add-container.js"></script> -->
+ 
     <link rel="stylesheet" href="popup.css">
   </head>
 
   <body>
-    <div>
-      <span id="hot-button"><a href="hot-drops.html">Hot Drops</a></span>
+    <div id="home">
 
-      <li id="removeAll">
-        <button id="remove-all"> Remove All</button>
-      </li>
+     <!--  <span id="container"></span> -->
+      <!-- <span id="hot-button"><a href="hot-drops.html">Hot Drops</a></span> -->
+
+     
+    <a href=add-container.html>
+      <div id="top" class="div-home">
+        <svg viewBox="24 0 72 72" id="addButton"><path id="first-path" d="M60.493 72C79.883 72 96 55.882 96 36.493 96 16.118 79.882 0 60.493 0 40.118 0 24 16.118 24 36.493 24 55.883 40.118 72 60.493 72z" fill="#3F9FFF" fill-rule="evenodd"></path><path d="M58 34h-9c-.553 0-1 .452-1 1.01v1.98c0 .567.448 1.01 1 1.01h9v9c0 .553.452 1 1.01 1h1.98c.567 0 1.01-.448 1.01-1v-9h9c.553 0 1-.452 1-1.01v-1.98c0-.567-.448-1.01-1-1.01h-9v-9c0-.553-.452-1-1.01-1h-1.98c-.567 0-1.01.448-1.01 1v9z" fill="#FFF" fill-rule="evenodd" ></path>
+        </svg>
+        <h2>Add a new drop</h2>
+      </div>  
+    </a>
 
       <span id="saved-pages"></span>
-      <div>
-        <ul id="list"></ul>
+      <div id="list-container">
+        <!-- No drops yet! -->
+        <!-- <p>No drops yet!</p> -->
+        <div id="list">
+          <!--   <div class="scrollbar" id="style-4">
+              <div class="force-overflow"></div>
+       
+            </div> -->
+             <!-- <div class="scrollable__scrollbar-thumb" style="height: 0px; transform: translateY(0px);"></div> -->
+
+        </div>
 
       </div>
-    </div>
 
-    <input type="button" id="save" value="Add">
-    <input type="text" id="saveLink" name="member" value=""><br/>
-    <span id="settings-button"><a href="settings.html">Settings</a></span>
+    <!--     <div id ="image-container" class="drop-details" style="display:none;">Add Image</div>
+        <div id="link-container" class="drop-details" style="display:none">Add Link</div>
+        <div id="desc-container" class="drop-details" style="display:none">Add Description</div>
+        <div id ="date-container" class="drop-details"style="display:none">Add Date</div> -->
+       
+   <!--    <li id="removeAll">
+        <button id="remove-all-button"> Remove All</button>
+      </li> -->
+
+    <!-- <form id="first_form">
+      
+      <input name ="url" placeholder="Drop Url" type="text" id="saveLink">
+      <input type="submit" id="save" value="Add">
+      <br/>
+    </form> -->
+    <!-- <span id="settings-button"><a href="settings.html">Settings</a></span> -->
 
   </body>
 
 </html>
+	
